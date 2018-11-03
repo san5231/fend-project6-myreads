@@ -22,7 +22,7 @@ class MainPage extends Component {
                         <Book
                           book={book}
                           updateShelf={this.props.updateShelf}
-                          currentShelf="currentlyReading"
+                          currentShelf={book.shelf}
                         />
                       </li>
                     ))}
@@ -40,7 +40,7 @@ class MainPage extends Component {
                         <Book
                           book={book}
                           updateShelf={this.props.updateShelf}
-                          currentShelf="wantToRead"
+                          currentShelf={book.shelf}
                         />
                       </li>
                     ))}
@@ -58,7 +58,7 @@ class MainPage extends Component {
                         <Book
                           book={book}
                           updateShelf={this.props.updateShelf}
-                          currentShelf="read"
+                          currentShelf={book.shelf}
                         />
                       </li>
                     ))}
@@ -68,9 +68,7 @@ class MainPage extends Component {
           </div>
         </div>
         <div className="open-search">
-          <a onClick={() => this.setState({ showSearchPage: true })}>
-            Add a book
-          </a>
+          <Link to="/search">Add a book</Link>
         </div>
       </div>
     );
