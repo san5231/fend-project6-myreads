@@ -3,7 +3,6 @@ import * as BooksAPI from "./BooksAPI";
 import SearchPage from "./SearchPage";
 import MainPage from "./MainPage";
 import { Route } from "react-router-dom";
-import excapeRegExp from "escape-string-regexp";
 import "./App.css";
 
 class BooksApp extends React.Component {
@@ -22,10 +21,13 @@ class BooksApp extends React.Component {
       this.setState({ books: books });
     });
   };
+
   render() {
     return (
       <div className="app">
-        <MainPage books={this.state.books} updateShelf={this.updateShelf} />
+        {/*<MainPage books={this.state.books} updateShelf={this.updateShelf} />*/}
+
+        <SearchPage />
       </div>
     );
   }
