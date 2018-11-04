@@ -35,7 +35,7 @@ class Book extends Component {
           </div>
         </div>
         <div className="book-title">{this.props.book.title}</div>
-        <div className="book-authors">{displayAuthors}</div>
+        <div className="book-authors">{displayAuthors.join(", ")}</div>
       </div>
     );
   }
